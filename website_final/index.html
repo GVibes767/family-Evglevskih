@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>История семьи – забота о сиротах</title>
+    <style>
+        :root {
+            --primary: #363636;
+            --accent: #f27b42;
+            --light: #f8f5f2;
+            --dark-overlay: rgba(0,0,0,0.45);
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: var(--light);
+            color: var(--primary);
+            line-height: 1.6;
+        }
+        h1, h2, h3 {
+            font-weight: 700;
+        }
+        a { color: var(--accent); text-decoration: none; }
+        .hero {
+            position: relative;
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+        }
+        .hero img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+        }
+        .hero .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--dark-overlay);
+            z-index: -1;
+        }
+        .hero .content {
+            z-index: 1;
+            padding: 2rem;
+        }
+        section {
+            padding: 4rem 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .two-column {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 2rem;
+        }
+        .two-column .text {
+            flex: 1 1 55%;
+        }
+        .two-column .image {
+            flex: 1 1 40%;
+        }
+        .two-column .image img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+        }
+        .gallery img {
+            width: 100%;
+            border-radius: 6px;
+            object-fit: cover;
+        }
+        ul.needs {
+            list-style: none;
+            columns: 2;
+            column-gap: 2rem;
+            padding-left: 1rem;
+            margin-top: 1rem;
+        }
+        ul.needs li::before {
+            content: '\2022';
+            color: var(--accent);
+            margin-right: 0.5rem;
+        }
+        .cta {
+            background-color: #fef8f4;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+        .cta h2 {
+            margin-bottom: 1rem;
+        }
+        .cta p {
+            margin-bottom: 0.5rem;
+        }
+        .cta a.phone {
+            display: inline-block;
+            margin: 0.25rem 0;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--accent);
+        }
+        /* cursor praying hands */
+        #cursorIcon {
+            position: fixed;
+            top: 0;
+            left: 0;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            font-size: 32px;
+            z-index: 9999;
+            transition: transform 0.1s ease-out;
+        }
+        @media (max-width: 768px) {
+            .two-column {
+                flex-direction: column;
+            }
+            ul.needs { columns: 1; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Cursor follower -->
+    <div id="cursorIcon">🙏</div>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="images/group.jpg" alt="Дети">
+        <div class="overlay"></div>
+        <div class="content">
+            <h1>История семьи: забота о сиротах</h1>
+            <p>Семья Евглевских, Омск</p>
+        </div>
+    </section>
+    
+    <!-- Call Section -->
+    <section>
+        <div class="two-column">
+            <div class="text">
+                <h2>Божий призыв</h2>
+                <p>Три года мы молились, и Бог говорил о сиротах. Спорили и сомневались, но призыв не уходил. Наконец доверились Господу, и открыли двери семи детям.</p>
+            </div>
+            <div class="image">
+                <img src="images/group.jpg" alt="Дети, которых мы приняли">
+            </div>
+        </div>
+    </section>
+
+    <!-- Conditions Section -->
+    <section>
+        <h2>Сложные условия</h2>
+        <div class="gallery">
+            <a href="images/radiator.jpg" target="_blank">
+                <img src="images/radiator.jpg" alt="Старые батареи и трубы">
+            </a>
+            <a href="images/room.jpg" target="_blank">
+                <img src="images/room.jpg" alt="Разбитая комната">
+            </a>
+            <a href="images/window1.jpg" target="_blank">
+                <img src="images/window1.jpg" alt="Поломанные окна">
+            </a>
+            <a href="images/bath.jpg" target="_blank">
+                <img src="images/bath.jpg" alt="Ржавая ванна">
+            </a>
+            <a href="images/stairs.jpg" target="_blank">
+                <img src="images/stairs.jpg" alt="Старая лестница">
+            </a>
+            <a href="images/bathroom.jpg" target="_blank">
+                <img src="images/bathroom.jpg" alt="Развалившаяся ванная комната">
+            </a>
+        </div>
+    </section>
+
+    <!-- Needs Section -->
+    <section>
+        <h2>Наши потребности</h2>
+        <ul class="needs">
+            <li>14 комплектов постельного белья</li>
+            <li>7 подушек и 7 одеял</li>
+            <li>Замена 3 окон и 3 натяжных потолков</li>
+            <li>Покраска стен, обои и линолеум</li>
+            <li>Краска для батарей и 5 дверей</li>
+        </ul>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <h2>Как помочь</h2>
+        <p>Свяжитесь с Виталием</p>
+        <a class="phone" href="tel:+79136605305">+7 913 660 53 05</a>
+        <p>Поддержите финансово</p>
+        <a class="phone" href="tel:+79659874013">+7 965 987 40 13</a>
+        <p>Мы служим в церкви «Ковчег» (Омск). Одни мы не справимся. Пусть Бог благословит каждого!</p>
+        <div style="margin-top:2rem;">
+            <img src="images/couple.jpg" alt="Семья Евглевских" style="max-width: 200px; border-radius: 8px;">
+        </div>
+    </section>
+
+    <script>
+    // Cursor praying hands follower
+    const cursor = document.getElementById('cursorIcon');
+    document.addEventListener('mousemove', function(e) {
+        const x = e.clientX;
+        const y = e.clientY;
+        cursor.style.transform = `translate(${x}px, ${y}px)`;
+    });
+    </script>
+</body>
+</html>
